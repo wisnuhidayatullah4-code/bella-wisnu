@@ -1,84 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan Pernikahan Bella & Wisnu</title>
-<style>
-body {margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#fff,#f9f6ef);color:#333;text-align:center;}
-header{padding:80px 20px;background:linear-gradient(to bottom,#fff8e1,#fff);}
-header h1{font-size:3rem;color:#bfa14a;margin-bottom:0;}
-header p{font-size:1.2rem;color:#555;}
-section{padding:40px 20px;}
-h2{color:#bfa14a;margin-bottom:10px;}
-.gallery img,.dekorasi img{width:220px;border-radius:12px;margin:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-footer{background:#fff8e1;padding:20px;font-size:0.9rem;color:#555;}
-button{background:#bfa14a;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;}
-button:hover{background:#a88e3c;}
-input,textarea{width:80%;max-width:400px;padding:10px;margin:5px;border-radius:8px;border:1px solid #ddd;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella & Wisnu Wedding Invitation</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<audio autoplay loop>
-  <source src="assets/music/piano.mp3" type="audio/mpeg">
-</audio>
+  <section class="hero">
+    <h1>Bella & Wisnu</h1>
+    <p>Minggu, 26 Oktober 2025</p>
+  </section>
 
-<header>
-  <h1>Bella & Wisnu</h1>
-  <p>Minggu, 26 Oktober 2025</p>
-</header>
+  <section class="gallery">
+    <h2>Galeri Kami</h2>
+    <div class="images">
+      <img src="assets/images/foto1.jpg" alt="Foto 1" />
+      <img src="assets/images/foto2.jpg" alt="Foto 2" />
+      <img src="assets/images/foto3.jpg" alt="Foto 3" />
+    </div>
+  </section>
 
-<section>
-  <h2>Akad Nikah</h2>
-  <p>08.00 WIB</p>
-  <h2>Resepsi</h2>
-  <p>10.00 WIB - Selesai</p>
-  <p>KM XI, Dusun Rimba Jaya, RT 14, Air Kumbang, Banyuasin</p>
-</section>
+  <section class="music">
+    <audio id="bg-music" autoplay loop>
+      <source src="assets/music/piano.mp3" type="audio/mpeg" />
+    </audio>
+  </section>
 
-<section class="gallery">
-  <h2>Galeri</h2>
-  <img src="assets/gallery1.jpg" alt="Galeri 1">
-  <img src="assets/gallery2.jpg" alt="Galeri 2">
-  <img src="assets/gallery3.jpg" alt="Galeri 3">
-</section>
+  <section class="map">
+    <h2>Lokasi Acara</h2>
+    <iframe src="https://www.google.com/maps?q=KM%20XI%20Dusun%20Rimba%20Jaya%20Air%20Kumbang%20Banyuasin&output=embed" width="100%" height="300" style="border:0;"></iframe>
+  </section>
 
-<section class="dekorasi">
-  <h2>Dekorasi</h2>
-  <img src="assets/dekorasi1.jpg" alt="Dekorasi 1">
-  <img src="assets/dekorasi2.jpg" alt="Dekorasi 2">
-</section>
+  <section class="amplop">
+    <h2>Amplop Digital</h2>
+    <p>Seabank 901897189880 a/n Rm Wisnu</p>
+  </section>
 
-<section>
-  <h2>Amplop Digital</h2>
-  <p>Seabank 901897189880 a/n Rm Wisnu</p>
-</section>
+  <section class="closing">
+    <p>“Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.”</p>
+  </section>
 
-<section>
-  <h2>Buku Tamu</h2>
-  <input id="nama" placeholder="Nama Anda"><br>
-  <textarea id="pesan" placeholder="Ucapan..."></textarea><br>
-  <button onclick="tambahUcapan()">Kirim</button>
-  <div id="daftarUcapan"></div>
-</section>
-
-<footer>
-  <p>“Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.”</p>
-</footer>
-
-<script>
-function tambahUcapan() {
-  const nama = document.getElementById('nama').value;
-  const pesan = document.getElementById('pesan').value;
-  if(nama && pesan) {
-    const p = document.createElement('p');
-    p.textContent = nama + ': ' + pesan;
-    document.getElementById('daftarUcapan').appendChild(p);
-    localStorage.setItem(nama, pesan);
-    document.getElementById('nama').value='';
-    document.getElementById('pesan').value='';
-  }
-}
-</script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
